@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { JobApplicant } from 'src/app/models/JobApplicant';
 import { OuterService } from 'src/services/outer.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { OuterService } from 'src/services/outer.service';
 })
 export class JobApplicantComponent implements OnInit {
   searchId: string;
-
+  applicantList:JobApplicant[]=[]
   constructor(private _outerService: OuterService, private _router: Router,private _routeParams: ActivatedRoute) { }
 
   ngOnInit() {

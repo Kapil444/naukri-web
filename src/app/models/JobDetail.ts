@@ -10,7 +10,11 @@ export class JobDetail {
     companyName:string;   
   recruiter_id: any;
   title : string;
+  description:string;
+  supportEmail:string;
   location : String;
+  recruiter_name:string;
+  createdDate:Date;
   experienceRequired : String;    
   
 }
