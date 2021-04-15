@@ -1,0 +1,66 @@
+<app-header></app-header>
+<div class="job-creation-main">
+<form #register="ngForm" (ngSubmit)="createJob()">
+  <div class="conatiner">
+    <div class="row justify-content-center">
+      <div class="company-info">
+        <h3>Company Information</h3>
+        <p>Your Name</p>
+        <input type="text" name="name" [(ngModel)]="job.employerName" required placeholder="Enter your name">
+        <p>Your Company Name</p>
+        <input type="text" name="companyName" [(ngModel)]="job.companyName" required placeholder="Enter your company's name">
+        <p>Email Address</p>
+        <input type="email" name="email" [(ngModel)]="job.supportEmail" required placeholder="Enter email address">
+        
+      </div>
+      <div class="job-detail">
+        <h3>Job Details</h3>
+        <p>Job Title</p>
+        <input type="text" name="jobTitle" [(ngModel)]="job.jobTitle" required placeholder="Enter job title">
+        <p> Job Location (full street address)</p>
+        <input type="text" name="jobLocation" [(ngModel)]="job.jobLocation" required placeholder="Enter job location"> <br>
+       
+       
+        <div class="job-type">
+          
+          <p> Salary</p>
+          <div class="salary">
+            <button type="button" style="margin-left: 0px;">₹</button> <input type="text" placeholder="Min Salary" name="monthlySalaryMin"
+              [(ngModel)]="job.monthlySalaryMin" required>
+            <label for="">to</label>
+            <button type="button">₹</button><input type="text" name="monthlnSalaryMax"
+              [(ngModel)]="job.monthlnSalaryMax" placeholder="Max Salary" required style="margin-right: 0px;">
+          </div>
+         
+
+        </div>
+      </div>
+      <div class="job-description">
+        <h3>Job Description</h3>
+        <p style="text-align: center;">Copy and paste your existing job description or write a new one here. Try to be
+          informative and descriptive in your job description.
+
+          Bold</p>
+        <div class="row">
+          <div class="container">
+            <div class="description" style="margin-top: 20px; height: 300px;">
+               
+                  <textarea id="w3review" name="w3review"  [(ngModel)]="job.description" required  rows="10" cols="115">
+                   Job Description Related to Techstack
+             </textarea>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-end">
+          <div class="col12">
+            <button type="submit" >Continue to Create Job <i class="fa fa-arrow-right"></i></button>
+          </div>
+        </div>
+      
+      </div>
+   
+    </div>
+  </div>
+</form>
+  </div>
+
