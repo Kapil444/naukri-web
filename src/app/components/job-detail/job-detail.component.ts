@@ -54,7 +54,11 @@ export class JobDetailComponent implements OnInit {
   getJobByCandidateAndJobId(){
     if(localStorage.getItem('token')!=null && localStorage.getItem("role")=="ROLE_CUS"){        
       this._outerService.getApplicantByJobIdAndCandidateId(this.searchId).subscribe((res)=>{
-        this.appliedCheck = false;        
+        // @ts-ignore
+        if(res.data.length>0){
+          this.appliedCheck = false;   
+        }
+             
       },(err)=>{
         console.log(err)
       })

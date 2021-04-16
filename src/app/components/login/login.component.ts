@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
       
       this._router.navigate(['/home'])
     }, (err) => {
-      console.log(err)
+      alert("Invalid Username and Password")
     })
   }
   getDecodedAccessToken(token: string): any {
