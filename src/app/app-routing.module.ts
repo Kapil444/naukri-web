@@ -7,14 +7,12 @@ import { JobDetailComponent } from './components/job-detail/job-detail.component
 import { JobListComponent } from './components/job-list/job-list.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterCandidateComponent } from './components/register-candidate/register-candidate.component';
-import { RegisterRecruiterComponent } from './components/register-recruiter/register-recruiter.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'recruiter-register', component: RegisterRecruiterComponent },
+  { path: 'home', component: HomeComponent },  
   { path: 'candidate-register', component: RegisterCandidateComponent },
   { path: 'job-post', component: JobCreateComponent },
   { path: 'job-detail', component: JobDetailComponent },

@@ -9,7 +9,6 @@ import { JobDetailComponent } from './components/job-detail/job-detail.component
 import { JobApplicantComponent } from './components/job-applicant/job-applicant.component';
 import { JobCreateComponent } from './components/job-create/job-create.component';
 import { LoginComponent } from './components/login/login.component';
-import { RegisterRecruiterComponent } from './components/register-recruiter/register-recruiter.component';
 import { RegisterCandidateComponent } from './components/register-candidate/register-candidate.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -23,7 +22,7 @@ import { HeaderComponent } from './components/header/header.component';
     JobApplicantComponent,
     JobCreateComponent,
     LoginComponent,
-    RegisterRecruiterComponent,
+  
     RegisterCandidateComponent,
     HeaderComponent
   ],
